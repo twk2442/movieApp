@@ -19,14 +19,16 @@ class App extends Component {
         <h1>Number {this.state.count}</h1>
         <button
           onClick={function () {
-            this.setState = { count: +1 };
+            //this.setState({ count: this.state.count + 1 }); //!! count 변수를 그냥쓰지않고 this를 꼭 써준다 count는 객체이기때문
+            this.setState((current) => ({ count: current.count + 1 }));
           }.bind(this)}
         >
           add
         </button>
         <button
           onClick={function () {
-            this.setState = { count: -1 };
+            //this.setState({ count: this.state.count - 1 });
+            this.setState((current) => ({ count: current.count - 1 }));
           }.bind(this)}
         >
           minus
