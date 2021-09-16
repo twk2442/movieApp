@@ -5,7 +5,7 @@ import { Component } from "react";
 // state 는 동적인데이터로 데이터수정이 가능하다.
 // 따라서 state에는 바꾸고 싶은 데이터를 넣는다
 
-class App extends Component {
+class CountFunc extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -42,4 +42,4 @@ class App extends Component {
 //update: update 할때 발생(ex:setState사용시) shcM-> render-> componentDidUpdate
 //unmount: componentWiiUnmount (컴포넌트가 죽을때 발생 , 페이지 이동할때 )
 
-export default App;
+export default CountFunc;
