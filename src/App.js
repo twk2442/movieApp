@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Movie from "./movie";
 
 //axios는  Promise API를 활용하는 HTTP 비동기 통신 라이브러리이다
 class App extends React.Component {
@@ -26,8 +27,25 @@ class App extends React.Component {
     this.getMovies();
   }
   render() {
-    const { isLoading } = this.state; //js  es6표현
-    return <div>{isLoading ? "Loading..." : "we are ready"}</div>;
+    const { isLoading, movies } = this.state; //js  es6표현
+    return (
+      <div>
+        {isLoading
+          ? "Loading..."
+          : movies.map((movie) => {
+              return (
+                <Movie
+                  key={movie.id}
+                  id={movie.id}
+                  year={movie.year}
+                  title={movie.title}
+                  summary={movie.summary}
+                  poster={movie.medium_cover_image}
+                />
+              );
+            })}
+      </div>
+    );
   }
 }
 

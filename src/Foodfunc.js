@@ -59,8 +59,8 @@ const foodILike = [
   },
 ];
 
-function App() {
-  // App이라는 컴포넌트, 컴포넌트는 html을 반환하는 함수
+function Foodfunc() {
+  // Foodfunc이라는 컴포넌트, 컴포넌트는 html을 반환하는 함수
   // 리엑트는 props를 통해 컴포넌트에 정보를 전달 가능
   return (
     <div className="App">
@@ -80,3 +80,5 @@ function App() {
     </div>
   );
 }
+
+export default Foodfunc;
