@@ -3,6 +3,7 @@ import axios from "axios";
 import Movie from "./movie";
 
 // dom 공부
+// redux , ts
 // 예약프로그램
 //axios는  Promise API를 활용하는 HTTP 비동기 통신 라이브러리이다
 class App extends React.Component {
